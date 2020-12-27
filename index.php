@@ -33,7 +33,7 @@
         <button type="submit" name="usr_login">Log In</button>
     </form>
 
-    <?php include('login.inc.php') ?>
+    <?php include('includes/login.inc.php') ?>
 
 
 </body>

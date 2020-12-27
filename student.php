@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    include('student.inc.php');
+    include('includes/student.inc.php');
     $_SESSION['view_status'] = 0;
     ?>
 

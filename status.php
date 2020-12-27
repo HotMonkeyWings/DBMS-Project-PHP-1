@@ -10,7 +10,7 @@
 <body>
     <h2>Permission Details</h2>
 
-    <?php include('status.inc.php'); ?>
+    <?php include('includes/status.inc.php'); ?>
 
     <div>
         <p>Permission ID : <?php echo $_SESSION['permission_id'] ?></p>

@@ -39,7 +39,7 @@
 
         <button type="submit" name="req_submit">Submit</button>
 
-        <?php include('request.inc.php') ?>
+        <?php include('includes/request.inc.php') ?>
 
         <div>
             <label >Go back to <a href="student.php">Home page</a></label>
