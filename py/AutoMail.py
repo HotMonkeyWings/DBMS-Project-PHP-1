@@ -20,5 +20,5 @@ msg.set_content(m)
 
 with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
     print("Logged in")
-    smtp.login('devsony52@gmail.com', '$h1ttyp@$$')
+    smtp.login('devsony52@gmail.com', '')
     smtp.send_message(msg)
