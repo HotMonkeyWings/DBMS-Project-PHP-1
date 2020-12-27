@@ -7,12 +7,17 @@
 </head>
 <body>
 
-    <button>Send OTP</button>
     <form action="" method="POST">
-        <div>
+        <!-- <div>
+
+           <label >Send OTP</label>
+            <input type="button" name="send_otp" >
+
             <label for="otp">Enter OTP</label>
             <input type="text" name="otp" required>
-        </div>
+        </div> -->
+        <?php include('otp/index.php'); ?>
+        
         <div>
             <label for="no_of_days">Number of days</label>
             <input type="number" name="no_of_days" >
@@ -21,13 +26,13 @@
             <label for="vacate_date">Vacate Date</label>
             <input type="date" name="vacate_date">
         </div>
-        <div>
+        <!-- <div>
             <select name="priority">
                 <option value="High">High (Vacate Date within 1-3 days)</option>
                 <option value="Medium">Medium (Vacate Date within 3-7 days)</option>
                 <option value="Low">Low (Otherwise)</option>
             </select>
-        </div>
+        </div> -->
         <div>
             <label for="return_date">Return Date</label>
             <input type="date" name="return_date">
@@ -48,3 +53,4 @@
 
 </body>
 </html>
+

@@ -14,7 +14,7 @@
     ?>
 
     <button name="new_req">
-        <a href="request.php">New Request</a>
+        <a href="otp/index.php">New Request</a>
     </button>
     <button name="view_status">
         <a href="status.php">See request status</a>
