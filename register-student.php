@@ -83,7 +83,7 @@
                 <label>Year of Study:</label>
                 <div class="group">
                     <i class="fas fa-calendar"></i>
-                    <input type="text" class="form-control" name="Year_of_Study" placeholder="example@nitc.ac.in" required="required" />
+                    <input type="text" class="form-control" name="Year_of_Study" placeholder="1/2/3/4/5" required="required" />
                 </div>
             </div>
 
@@ -91,7 +91,7 @@
                 <label>Department:</label>
                 <div class="group">
                     <i class="fas fa-university"></i>
-                    <input type="text" class="form-control" name="Department" placeholder="Department" required="required" />
+                    <input type="text" class="form-control" name="Department" placeholder="CSE/EEE/ECE/BT/EP/PROD/CHEM/ARCHI/ME/MECH" required="required" />
                 </div>
             </div>
 

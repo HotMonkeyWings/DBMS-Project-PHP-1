@@ -39,7 +39,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="script.js"> -->
     </script>
-    
+
 </head>
 
 <body>
@@ -48,7 +48,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <div class="lmao" style="height: 70vh;position:relative;overflow:auto;">
 
-    <?php
+        <?php
         $arr2 = array();
         $sql2 = "SELECT * FROM approve";
         $result2 = mysqli_query($conn, $sql);
@@ -77,17 +77,16 @@ while ($row = mysqli_fetch_assoc($result)) {
             $query = "SELECT * FROM approve WHERE Permission_ID = '$permid'";
             $result = mysqli_query($conn, $query);
             $res = mysqli_fetch_row($result);
-            if(!$result){
-                echo "Error ". mysqli_error($result);
-            } 
-            if($row['OTP_Sent'] == 1){
-                $otp = "Sent";
+            if (!$result) {
+                echo "Error " . mysqli_error($result);
             }
-            else{
+            if ($row['OTP_Sent'] == 1) {
+                $otp = "Sent";
+            } else {
                 $otp = "Not Sent";
             }
-             if($res[2] == "Waitlisted")
-             {
+            // echo "<div class=\"lmao\" style=\"height: 70vh;position:relative;overflow:auto;\">";
+            if ($res[2] == "Waitlisted") {
                 echo "
                 <div>
                     <div class=\" w3l-login-form\">
@@ -102,7 +101,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <b> Total Number of days: {$row['No_of_Days']}  </b>
                         <br> </br>
                         <b> Status: {$res[2]}  </b>
-                        <b><p style=\"text-align:center;\"class=\" w3l-register-p\"><a href=\"stud_details.php?link=" . $row['Student_Roll_No'] . "\" class=\"register\"> View Student Details</a></p></b></div>
+                        <b><p style=\"text-align:center;\"class=\" w3l-register-p\"><a href=\"stud_details.php?link=" . $row['Student_Roll_No'] . "\" class=\"register\"> View Student Details</a></p></b>
                         <b><p style=\"text-align:center;\"class=\" w3l-register-p\"><a href=\"req_accept.php?link=" . $row['Permission_ID'] . "\" class=\"register\"> Accept Request</a></p></b>
                         <b><p style=\"text-align:center;\"class=\" w3l-register-p\"><a href=\"req_deny.php?link=" . $row['Permission_ID'] . "\" class=\"register\"> Deny Request</a></p></b>    
                         </div>
@@ -112,7 +111,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                 </div>
                 
                 ";
-             }
+            }
+            // echo "</div>";
         }
 
 

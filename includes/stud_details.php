@@ -48,7 +48,6 @@ session_start();
 
         <?php
         $roll = $_GET['link'];
-        echo $roll;
         $query = "SELECT * FROM student WHERE Student_Roll_No = '$roll'";
         $result = mysqli_query($conn, $query);
         $res = mysqli_fetch_row($result);

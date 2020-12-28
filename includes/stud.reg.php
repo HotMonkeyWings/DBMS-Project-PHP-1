@@ -12,7 +12,7 @@
     $Parent_Email = $_POST['Parent_Email'];
     $Room_ID = $_POST['Room_ID'];
     $Hostel_Name = $_POST['Hostel_Name'];
-    if(!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@nitc.ac.in", $email)){
+    if(!filter_var($Email, FILTER_VALIDATE_EMAIL)){
         header ("Location: ../register-student.php?error=invalidEmail");
         exit();
     } else{
