@@ -16,25 +16,42 @@
 <body>
     <h1>LH Permissions</h1>
     <div class=" w3l-login-form">
-        <h2>Student Login</h2>
-        <form action="includes/stud.login.php" method="POST">
+        <h2>New Request</h2>
+        <form action="includes/studs.insert.req.php" method="POST">
 
             <div class=" w3l-form-group">
-                <label>Student Roll No:</label>
+                <label>Priority:</label>
                 <div class="group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" name="student_roll_no" placeholder="Roll No" required="required" />
-                </div>
-            </div>
-            <div class=" w3l-form-group">
-                <label>Password:</label>
-                <div class="group">
-                    <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" name="pwd" placeholder="Password" required="required" />
+                    <i class="fas fa-bolt"></i>
+                    <input type="text" class="form-control" name="Priority" placeholder="High/Med/Low" required="required" />
                 </div>
             </div>
 
-            <button type="submit" name="insert-new">Login</button>
+            <div class=" w3l-form-group">
+                <label>Vacate Date:</label>
+                <div class="group">
+                    <i class="fas fa-calendar-minus"></i>
+                    <input type="date" class="form-control" name="Vacate_Date" placeholder="DD-MM-YYYY" required="required" />
+                </div>
+            </div>
+
+            <div class=" w3l-form-group">
+                <label>Return Date:</label>
+                <div class="group">
+                    <i class="fas fa-calendar-plus"></i>
+                    <input type="date" class="form-control" name="Return_Date" placeholder="DD-MM-YYYY" required="required" />
+                </div>
+            </div>
+            
+            <div class=" w3l-form-group">
+                <label>Reason:</label>
+                <div class="group">
+                    <i class="fas fa-align-left"></i>
+                    <input type="text" class="form-control" name="Description" placeholder="Reason for Request" required="required" />
+                </div>
+            </div>
+
+            <button type="submit" name="insert-new">Submit</button>
         </form>
         </div>
 

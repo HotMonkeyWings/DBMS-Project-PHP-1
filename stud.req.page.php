@@ -49,13 +49,20 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <h1>Requests</h1>
 
+    <form action="stud.req.new.php">
+        <div class=" w3l-login-form" style="background-color:rgba(0,0,0,0)">
 
+            <button type="submit" name="new">New Request</button>
+
+        </div>
+
+    </form>
 
     <div class="lmao" style="height: 70vh;position:relative;overflow:auto;">
 
         <?php
         $arrlen = count($arr);
-        if ($arrlen === 0){
+        if ($arrlen === 0) {
             echo "
             <div>
             <div class=\" w3l-login-form\">
@@ -67,7 +74,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             </div>
         </div>";
         }
-        for($i = 0; $i < $arrlen; $i++){
+        for ($i = 0; $i < $arrlen; $i++) {
             $row = $arr[$i];
             echo "
         <div>
@@ -75,12 +82,12 @@ while ($row = mysqli_fetch_assoc($result)) {
             <form action=\"stud.del.req.php\" method=\"POST\">
                 <div class=\"pertext\">
                     " . $row['Permission_ID'] . "
-                    <br><br>".$row['Vacate_Date'] . "
+                    <br><br>" . $row['Vacate_Date'] . "
                     to " . $row['Return_Date'] . "
                     <br>" . $row['Description'] . "
-                    <br>". $row['No_of_Days'] . "
+                    <br>" . $row['No_of_Days'] . "
 
-                    <button type=\"submit\" value=". $i ." name=\"delete\">delete</button>
+                    <button type=\"submit\" value=" . $i . " name=\"delete\">delete</button>
                 </div>
                 </form>
             </div>
@@ -89,8 +96,8 @@ while ($row = mysqli_fetch_assoc($result)) {
         
         ";
         }
-        
-            
+
+
         ?>
 
 

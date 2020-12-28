@@ -5,7 +5,7 @@ if (isset($_POST['login-submit'])) {
   require 'db.config.php';
   session_start();
   $roll = $_POST['username'];
-  $password = $_POST['pwd'];
+  $password = hash("md5",$_POST['pwd']);
 
   if (empty($roll) || empty($password)) {
     header("Location: ../login-hostel_manager.php?error=emptyfields");

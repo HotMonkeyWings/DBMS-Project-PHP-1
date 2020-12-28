@@ -33,7 +33,7 @@ if (isset($_POST['student-login-submit'])) {
       else if($password == $row['Password']) {
         $_SESSION['login_user_stud'] = $roll;
         $_SESSION['login_user_fa'] = NULL;
-        echo "Success";
+        header("Location: ../stud.req.page.php");
       }
       else {
         header("Location: ../login-student.php?error=strangeerr");
