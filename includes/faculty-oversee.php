@@ -47,6 +47,13 @@ while ($row = mysqli_fetch_assoc($result)) {
     <h1>Requests to be reviewed:</h1>
 
     <div class="lmao" style="height: 70vh;position:relative;overflow:auto;">
+    <form action="fac_alloc_rooms.php" method="POST">
+        <div class=" w3l-login-form" style="background-color:rgba(0,0,0,0)">
+            <button type="submit" name="deets2" value = "b">Review room requests</button>
+
+        </div>
+
+    </form>
 
         <?php
         $arr2 = array();

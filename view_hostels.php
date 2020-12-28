@@ -18,11 +18,13 @@
 </head>
 
 </head>
-<body>
+<body style="overflow:hidden">
+<p class=" w3l-register-p">Back to <a href="stud.req.page.php" class="register"> Home page</a></p>
+
     <h1>Hostel Details</h1>
 <div>
 <?php  
-    require_once 'includes/db_connection.inc.php';
+    require_once 'includes/db.config.php';
     $arr = array();
     $sql = "SELECT * FROM hostel";
     $result = mysqli_query($conn, $sql);
@@ -38,13 +40,13 @@
         $arr[1] = $row['Location'];
         $arr[2] = $row['No_of_Floors'];
         $arr[3] = $row['No_of_Rooms'];
-        // if($row['OTP_Entered'] == 1){
-        // $arr[4] = "Verified";
-        // }
-        // else{
-        //     $arr[4] = "Incorrect";
-        // }
-        $arr[4] = $row['Elevator'];
+        if($row['Elevator']){
+        $arr[4] = "Yes";
+        }
+        else{
+            $arr[4] = "No";
+        }
+        //$arr[4] = $row['Elevator'];
         $arr[5] = $row['Room_capacity'];
         
         $query = "SELECT * FROM room WHERE Hostel_Name = '$arr[0]' AND No_of_Inmates = '0'";
@@ -83,8 +85,6 @@
         </div>
     </div>
 <?php endwhile ?>
-<p class=" w3l-register-p">Back to <a href="stud.req.page.php" class="register"> Home page</a></p>
-
         </div>
 </body>
 </html>

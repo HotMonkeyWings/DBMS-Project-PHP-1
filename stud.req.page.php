@@ -1,5 +1,5 @@
 <?php
-require 'includes/db_connection.inc.php';
+require 'includes/db.config.php';
 session_start();
 $arr = array();
 $roll = $_SESSION['login_user_stud'];
@@ -59,7 +59,8 @@ while ($row = mysqli_fetch_assoc($result)) {
             <button type="submit" name="new">New Request</button>
             <br><br>
             <button type="submit" name="deets" value = "123">View Hostel Details</button>
-            
+            <br><br>
+            <button type="submit" name="alloc" value = "321">Request for room allotment</button>
 
         </div>
 

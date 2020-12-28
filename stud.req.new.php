@@ -5,6 +5,12 @@
         header("Location: view_hostels.php");
         // exit(0);
     }
+    $val2 = $_POST['alloc'];
+    if(!empty($val2)){
+        $val2 = null;
+        header("Location: allocroom.php");
+        // exit(0);
+    }
 ?>
 
 <!DOCTYPE html>
