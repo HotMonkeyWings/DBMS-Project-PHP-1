@@ -123,9 +123,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Dev Sony - [@HotMonkeyWings](https://github.com/HotMonkeyWings) - devsony52@gmail.com
+
 Soujanya Namburi - [@soujanyanmbri](https://github.com/soujanyanmbri) - namburisoujanya@gmail.com
+
 Sreelakshmi K - [@kay-23](https://github.com/kay-23) - sreesk3@gmail.com
+
 Emily Eldose - emily.eldose@gmail.com
+
 Adil Chery - dilluchery@gmail.com
 
 
