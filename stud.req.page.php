@@ -102,7 +102,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             else{
                 $otp = "Not Sent";
             }
-             if($res[2] != "Waitlisted")
+             if($res[2] != "Waitlisted" && $res[2] != "Approved" && $res[2] != "Denied" )
              {
                 echo "
                     <div>
