@@ -57,7 +57,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://github.com/kay-23/DBMS-Project-PHP)
 
 Colleges and most private schools have in-campus hostels. Most possess an improper method of storing and managing their inmates’ data. Moreover, these institutions impose a curfew on the female students residing in their hostels. The rule has, therefore, led to the initiation of permissions. Thus, female students need to attain permissions to leave hostel premises during weekends, obtain approval for escorting first-year girls to on-campus events and for extension of curfew times for girls in cultural or sports teams.
 
