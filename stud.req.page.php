@@ -1,5 +1,6 @@
 <?php
 require 'includes/db.config.php';
+session_start();
 $arr = array();
 $roll = $_SESSION['login_user_stud'];
 $sql = "SELECT * FROM permissions WHERE Student_Roll_No='$roll'";
@@ -62,6 +63,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
         <?php
         $arrlen = count($arr);
+        session_start();
         if ($arrlen === 0) {
             echo "
             <div>
@@ -78,35 +80,74 @@ while ($row = mysqli_fetch_assoc($result)) {
             $row = $arr[$i];
             $permid = $row['Permission_ID'];
             $query = "SELECT * FROM approve WHERE Permission_ID = '$permid'";
+            //$_SESSION['curr_perm'] = $permid;
+            //echo $_SESSION['curr_perm'];
             $result = mysqli_query($conn, $query);
             $res = mysqli_fetch_row($result);
             if(!$result){
                 echo "Error ". mysqli_error($result);
             } 
-             
-            echo "
-        <div>
-            <div class=\" w3l-login-form\">
-            <form action=\"stud.del.req.php\" method=\"POST\">
-                <div class=\"pertext\">
-                <strong>Permission ID: {$row['Permission_ID']}</strong>
-                <br> </br>
-                <b>Permission from: {$row['Vacate_Date']} to {$row['Return_Date']} </b>
-                <br> </br>
-                <b> Reason: {$row['Description']}  </b>
-                <br> </br>
-                <b> Total Number of days: {$row['No_of_Days']}  </b>
-                <br> </br>
-                <b> Status: {$res[2]}  </b>
-                <b><p style=\"text-align:center\"class=\" w3l-register-p\"><a href=\"\" class=\"register\"> Enter the Otp</a></p></b>
-                <button type=\"submit\" value=" . $i . " name=\"delete\">delete</button>
-                </div>
-                </form>
-            </div>
-            <br><br><br><br>
-        </div>
-        
-        ";
+            if($row['OTP_Sent'] == 1){
+                $otp = "Sent";
+            }
+            else{
+                $otp = "Not Sent";
+            }
+             if($res[2] != "Waitlisted")
+             {
+                echo "
+                    <div>
+                        <div class=\" w3l-login-form\">
+                        <form action=\"stud.del.req.php\" method=\"POST\">
+                            <div class=\"pertext\">
+                            <strong>Permission ID: {$row['Permission_ID']}</strong>
+                            <br> </br>
+                            <b>Permission from: {$row['Vacate_Date']} to {$row['Return_Date']} </b>
+                            <br> </br>
+                            <b> Reason: {$row['Description']}  </b>
+                            <br> </br>
+                            <b> Total Number of days: {$row['No_of_Days']}  </b>
+                            <br> </br>
+                            <b> OTP Sent: {$otp}  </b>
+                            <br> </br>
+                            <b> Status: {$res[2]}  </b>
+                            <b><p style=\"text-align:center\"class=\" w3l-register-p\"><a href=\"includes/generate_otp.inc.php?link=" . $row['Permission_ID'] . "\" class=\"register\"> Send OTP</a></p></b>
+                            <b><p style=\"text-align:center\"class=\" w3l-register-p\"><a href=\"includes/check_otp.php?link=" . $row['Permission_ID'] . "\" class=\"register\"> Enter the OTP</a></p></b>
+                            <button type=\"submit\" value=" . $i . " name=\"delete\">delete</button>
+                            </div>
+                            </form>
+                        </div>
+                        <br><br><br><br>
+                    </div>
+                    
+                    ";
+             }
+             else
+             {
+                echo "
+                    <div>
+                        <div class=\" w3l-login-form\">
+                        <form action=\"stud.del.req.php\" method=\"POST\">
+                            <div class=\"pertext\">
+                            <strong>Permission ID: {$row['Permission_ID']}</strong>
+                            <br> </br>
+                            <b>Permission from: {$row['Vacate_Date']} to {$row['Return_Date']} </b>
+                            <br> </br>
+                            <b> Reason: {$row['Description']}  </b>
+                            <br> </br>
+                            <b> Total Number of days: {$row['No_of_Days']}  </b>
+                            <br> </br>
+                            <b> Status: {$res[2]}  </b>
+                            <br> </br>
+                            <button type=\"submit\" value=" . $i . " name=\"delete\">delete</button>
+                            </div>
+                            </form>
+                        </div>
+                        <br><br><br><br>
+                    </div>
+                    
+                    ";
+             }
         }
 
 
