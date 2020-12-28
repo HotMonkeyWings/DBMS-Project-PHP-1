@@ -70,7 +70,6 @@ Implementation of a DBMS would contribute greatly to making inmates’ lives eas
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * Pure CSS
 * Javascript
 * [JQuery](https://jquery.com)
@@ -79,16 +78,13 @@ This section should list any major frameworks that you built your project using.
 * [Python](https://www.python.org/)
 * AJAX
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
 1. PHP and mySQL for Database Management
+
 2. JS, Jquery and AJAX were implemented through HTML headers.
+
 3. PHPmyadmin for GUI management of the Database.
 
 ### Installation
