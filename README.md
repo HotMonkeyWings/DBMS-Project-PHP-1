@@ -108,10 +108,14 @@ git clone https://github.com/kay-23/DBMS-Project-PHP.git
 ## Usage
 
 1. In order to start the php server, run the following command inside the repository.
-```php -S localhost:8000```
+```
+php -S localhost:8000
+```
 
 2. Then proceed to the login page by entering the following URL into your browser.
-```localhost:8000/login-student.php```
+```
+localhost:8000/login-student.php
+```
 
 3. The rest is GUI assisted. In order to go back to the login page, simply type the URL again.
 
