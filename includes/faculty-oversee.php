@@ -50,9 +50,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <h1>Requests</h1>
 
-    <div class="lmao" style="height: 70vh;position:relative;overflow:auto;">
+    <div class="lmao" style="height:70vh;position:relative;overflow:auto;">
 
-        <?php
+    <?php
         $arr2 = array();
         $sql2 = "SELECT * FROM approve";
         $result2 = mysqli_query($conn, $sql);
@@ -93,30 +93,29 @@ while ($row = mysqli_fetch_assoc($result)) {
              if($res[2] == "Waitlisted")
              {
                 echo "
-                    <div>
-                        <div class=\" w3l-login-form\">
-                        <form action=\"stud.del.req.php\" method=\"POST\">
-                            <div class=\"pertext\">
-                            <strong>Permission ID: {$row['Permission_ID']}</strong>
-                            <br> </br>
-                            <b>Permission from: {$row['Vacate_Date']} to {$row['Return_Date']} </b>
-                            <br> </br>
-                            <b> Reason: {$row['Description']}  </b>
-                            <br> </br>
-                            <b> Total Number of days: {$row['No_of_Days']}  </b>
-                            <br> </br>
-                            <b> Status: {$res[2]}  </b>
-                            <b><p style=\"text-align:center\"class=\" w3l-register-p\"><a href=\"view_student.php?link=" . $row['Student_Roll_No'] . "\" class=\"register\"> View Student Details</a></p></b>
-                            <b><p style=\"text-align:center\"class=\" w3l-register-p\"><a href=\"req_accept.php?link=" . $row['Permission_ID'] . "\" class=\"register\"> Accept Request</a></p></b>
-                            <b><p style=\"text-align:center\"class=\" w3l-register-p\"><a href=\"req_deny.php?link=" . $row['Permission_ID'] . "\" class=\"register\"> Deny Request</a></p></b>
-                            
-                            </div>
-                            </form>
+                <div>
+                    <div class=\" w3l-login-form\">
+                    <form action=\"stud.del.req.php\" method=\"POST\">
+                        <div class=\"pertext\">
+                        <strong>Permission ID: {$row['Permission_ID']}</strong>
+                        <br> </br>
+                        <b>Permission from: {$row['Vacate_Date']} to {$row['Return_Date']} </b>
+                        <br> </br>
+                        <b> Reason: {$row['Description']}  </b>
+                        <br> </br>
+                        <b> Total Number of days: {$row['No_of_Days']}  </b>
+                        <br> </br>
+                        <b> Status: {$res[2]}  </b>
+                        <b><p style=\"text-align:center;\"class=\" w3l-register-p\"><a href=\"stud_details.php?link=" . $row['Student_Roll_No'] . "\" class=\"register\"> View Student Details</a></p></b></div>
+                        <b><p style=\"text-align:center;\"class=\" w3l-register-p\"><a href=\"req_accept.php?link=" . $row['Permission_ID'] . "\" class=\"register\"> Accept Request</a></p></b>
+                        <b><p style=\"text-align:center;\"class=\" w3l-register-p\"><a href=\"req_deny.php?link=" . $row['Permission_ID'] . "\" class=\"register\"> Deny Request</a></p></b>    
                         </div>
-                        <br><br><br><br>
+                        </form>
                     </div>
-                    
-                    ";
+                    <br><br><br><br>
+                </div>
+                
+                ";
              }
         }
 

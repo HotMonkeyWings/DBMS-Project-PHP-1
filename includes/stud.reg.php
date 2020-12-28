@@ -30,7 +30,7 @@
 
         $Parent_ID = mysqli_insert_id($conn);
         echo "ParentID" . $Parent_ID;
-        $sql3 = "INSERT INTO student (Student_Roll_No, Name, Year_of_Study, Department, Hostel_Name, Room_ID, Parent_ID) VALUES ('$Student_Roll_No', '$Name', '$Year_of_Study', '$Department', '$Hostel_Name', '$Room_ID', $Parent_ID)";
+        $sql3 = "INSERT INTO student (Student_Roll_No, Name, Year_of_Study, Department, Hostel_Name, Room_ID, Parent_ID,Phone_Number) VALUES ('$Student_Roll_No', '$Name', '$Year_of_Study', '$Department', '$Hostel_Name', '$Room_ID', $Parent_ID,'$Phone_Number')";
     
         $result3 = mysqli_query($conn, $sql3);
         if(!$result3){
