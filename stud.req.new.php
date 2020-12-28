@@ -11,6 +11,7 @@
     <link href="web/css/style.css" rel="stylesheet" type="text/css" />
     <link href="web/css/fontawesome-all.css" rel="stylesheet" />
     <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -31,7 +32,11 @@
                 <label>Vacate Date:</label>
                 <div class="group">
                     <i class="fas fa-calendar-minus"></i>
-                    <input type="date" class="form-control" name="Vacate_Date" placeholder="DD-MM-YYYY" required="required" />
+                    <input type="date" class="form-control" name="Vacate_Date" min=
+                        <?php
+                            echo date("d-m-Y");
+                        ?>
+                    placeholder="DD-MM-YYYY" required="required" />
                 </div>
             </div>
 

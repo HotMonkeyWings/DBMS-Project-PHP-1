@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="script.js"> -->
     </script>
-
+    
 </head>
 
 <body>
@@ -76,18 +76,30 @@ while ($row = mysqli_fetch_assoc($result)) {
         }
         for ($i = 0; $i < $arrlen; $i++) {
             $row = $arr[$i];
+            $permid = $row['Permission_ID'];
+            $query = "SELECT * FROM approve WHERE Permission_ID = '$permid'";
+            $result = mysqli_query($conn, $query);
+            $res = mysqli_fetch_row($result);
+            if(!$result){
+                echo "Error ". mysqli_error($result);
+            } 
+             
             echo "
         <div>
             <div class=\" w3l-login-form\">
             <form action=\"stud.del.req.php\" method=\"POST\">
                 <div class=\"pertext\">
-                    " . $row['Permission_ID'] . "
-                    <br><br>" . $row['Vacate_Date'] . "
-                    to " . $row['Return_Date'] . "
-                    <br>" . $row['Description'] . "
-                    <br>" . $row['No_of_Days'] . "
-
-                    <button type=\"submit\" value=" . $i . " name=\"delete\">delete</button>
+                <strong>Permission ID: {$row['Permission_ID']}</strong>
+                <br> </br>
+                <b>Permission from: {$row['Vacate_Date']} to {$row['Return_Date']} </b>
+                <br> </br>
+                <b> Reason: {$row['Description']}  </b>
+                <br> </br>
+                <b> Total Number of days: {$row['No_of_Days']}  </b>
+                <br> </br>
+                <b> Status: {$res[2]}  </b>
+                <b><p style=\"text-align:center\"class=\" w3l-register-p\"><a href=\"\" class=\"register\"> Enter the Otp</a></p></b>
+                <button type=\"submit\" value=" . $i . " name=\"delete\">delete</button>
                 </div>
                 </form>
             </div>
@@ -101,53 +113,6 @@ while ($row = mysqli_fetch_assoc($result)) {
         ?>
 
 
-
-
-
-        <!-- <div id="lel2">
-            <div class=" w3l-login-form">
-                <form action="stud.del.req.php" method="POST">
-                    <div class="pertext" id="jello">
-                        Permission ID
-                        <br>B180297CS
-                        <br>Dev Sony
-                        <br>I suck at PC Building.
-                        <br> 5 days.
-
-                    </div>
-                    <input type="hidden" name="page" value="test">
-                    <button type="submit" value="1" name="delete">delete</button>
-                </form>
-
-
-            </div>
-            <br><br><br><br>
-        </div>
-
-        <div class=" w3l-login-form">
-            <div class="pertext">
-                Permission ID
-                <br>B180297CS
-                <br>Dev Sony
-                <br>I suck at PC Building.
-                <br> 5 days.
-            </div>
-
-        </div>
-
-
-        <br><br><br><br>
-
-        <div class=" w3l-login-form">
-            <div class="pertext">
-                Permission ID
-                <br>B180297CS
-                <br>Dev Sony
-                <br>I suck at PC Building.
-                <br> 5 days.
-            </div>
-
-        </div> -->
     </div>
 
 </body>

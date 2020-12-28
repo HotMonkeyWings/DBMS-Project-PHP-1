@@ -1,41 +1,53 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <link href="web/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="web/css/fontawesome-all.css" rel="stylesheet" />
+    <link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Login</h1>
+    <h1>LH Permissions</h1>
+    <div class=" w3l-login-form">
+        <h2>Student Login</h2>
+        <form action="includes/stud.login.php" method="POST">
 
-    <form action="" , method="POST">
+            <div class=" w3l-form-group">
+                <label>Student Roll No:</label>
+                <div class="group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" class="form-control" name="student_roll_no" placeholder="Roll No" required="required" />
+                </div>
+            </div>
+            <div class=" w3l-form-group">
+                <label>Password:</label>
+                <div class="group">
+                    <i class="fas fa-unlock"></i>
+                    <input type="password" class="form-control" name="pwd" placeholder="Password" required="required" />
+                </div>
+            </div>
 
-
-    <label for="user">
-        Login As
-        <select name="user" >
-            <option value="student">Student</option>
-            <option value="faculty">Faculty</option>
-        </select>
-    </label>
-        <div>
-            <label for="user_id">User ID</label>
-            <input type="text" name="user_id" required>
-        </div>
-
-        <div>
-            <label for="password">Password</label>
-            <input type="password" name="pwd" required>
-        </div>
-
-        <button type="submit" name="usr_login">Log In</button>
-    </form>
-
-    <?php include('includes/login.inc.php') ?>
+            <button type="submit" name="student-login-submit">Login</button>
+        </form>
+        <p class=" w3l-register-p">Login as<a href="login-hostel_manager.php" class="register"> Faculty</a></p>
+        <p class=" w3l-register-p">Don't have an account?<a href="register-student.php" class="register"> Register now</a></p>
+    </div>
 
 
 </body>
 
 </html>
+
+
+

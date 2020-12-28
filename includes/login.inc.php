@@ -7,7 +7,7 @@ if(isset($_POST['usr_login']))
 {
     $user_id = mysqli_real_escape_string($db,$_POST['user_id']);
     $pwd = mysqli_real_escape_string($db,$_POST['pwd']);
-
+    $pwd = hash(md5, $pwd);
     $query = "SELECT * FROM user WHERE user_id = '$user_id' AND password = '$pwd' ";
     $result = mysqli_query($db,$query);
 

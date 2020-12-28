@@ -36,7 +36,7 @@
 <body>
     <h1>LH Permissions</h1>
     <div class=" w3l-login-form" style="height: 70vh;position:relative;overflow:auto;" id="scrollbar1">
-        <form action="/includes/stud.reg.php" method="POST">
+        <form action="../includes/stud.reg.php" method="POST">
             <h2>Student Details</h2>
 
             <div class=" w3l-form-group">

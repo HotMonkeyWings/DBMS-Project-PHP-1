@@ -7,7 +7,7 @@ otp = sys.argv[2]
 
 msg = EmailMessage()
 msg['Subject'] = 'Hostel OTP'
-msg['From'] = 'devsony52@gmail.com'
+msg['From'] = 'ramshyamdam04@gmail.com'
 print("Hi", mail_id, otp)
 
 

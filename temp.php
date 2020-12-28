@@ -24,21 +24,21 @@
         <form action="includes/stud.login.php" method="POST">
 
             <div class=" w3l-form-group">
-                <label>Student Roll No:</label>
+                <label>User ID:</label>
                 <div class="group">
                     <i class="fas fa-user"></i>
-                    <input type="text" class="form-control" name="student_roll_no" placeholder="Roll No" required="required" />
+                    <input type="text" class="form-control" name="user_id" placeholder="User_ID" required="required" />
                 </div>
             </div>
             <div class=" w3l-form-group">
                 <label>Password:</label>
                 <div class="group">
                     <i class="fas fa-unlock"></i>
-                    <input type="password" class="form-control" name="pwd" placeholder="Password" required="required" />
+                    <input type="password" class="form-control" name="password" placeholder="Password" required="required" />
                 </div>
             </div>
 
-            <button type="submit" name="student-login-submit">Login</button>
+            <button type="submit" name="usr_login">Login</button>
         </form>
         <p class=" w3l-register-p">Login as<a href="login-hostel_manager.php" class="register"> Faculty</a></p>
         <p class=" w3l-register-p">Don't have an account?<a href="register-student.php" class="register"> Register now</a></p>
