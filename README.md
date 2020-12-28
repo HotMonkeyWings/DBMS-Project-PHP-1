@@ -100,7 +100,9 @@ sudo apt install mysql-server
 
 2. Clone the repo
 
-```git clone https://github.com/kay-23/DBMS-Project-PHP.git```
+```
+git clone https://github.com/kay-23/DBMS-Project-PHP.git
+```
    
 <!-- USAGE EXAMPLES -->
 ## Usage
