@@ -79,7 +79,7 @@ Implementation of a DBMS would contribute greatly to making inmates’ lives eas
 * AJAX
 
 <!-- GETTING STARTED -->
-##Getting Started
+## Getting Started
 
 ### Prerequisites
 
