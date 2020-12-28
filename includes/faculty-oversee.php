@@ -10,12 +10,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 ?>
-
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
 
 <head>
@@ -48,9 +44,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <body>
 
-    <h1>Requests</h1>
+    <h1>Requests to be reviewed:</h1>
 
-    <div class="lmao" style="height:70vh;position:relative;overflow:auto;">
+    <div class="lmao" style="height: 70vh;position:relative;overflow:auto;">
 
     <?php
         $arr2 = array();
@@ -121,7 +117,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 
         ?>
-
 
     </div>
 

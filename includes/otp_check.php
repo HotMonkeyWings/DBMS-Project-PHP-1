@@ -26,7 +26,10 @@ if (isset($_POST['student-otp-submit'])) {
             header("Location: ../stud.req.page.php");
         }
         else{
-            echo "Nay";
+            $query1 = "UPDATE approve SET Status_of_Approval='Denied' WHERE Permission_ID = '$perm'";
+            $res1 = mysqli_query($db, $query1);
+            echo $res1;
+            header("Location: ../stud.req.page.php");
         }
     }
 }
