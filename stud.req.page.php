@@ -1,5 +1,5 @@
 <?php
-require 'includes/db.config.php';
+require 'includes/db_connection.inc.php';
 session_start();
 $arr = array();
 $roll = $_SESSION['login_user_stud'];
@@ -50,6 +50,9 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <h1>Requests</h1>
 
+    <a href="view_hostels.php">View hostel details</a>
+
+    <br><br>
     <form action="stud.req.new.php">
         <div class=" w3l-login-form" style="background-color:rgba(0,0,0,0)">
 
@@ -93,7 +96,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             else{
                 $otp = "Not Sent";
             }
-             if($res[2] != "Waitlisted" && $res[2] != "Denied" && $res[2] != "Approved")
+             if($res[2] != "Waitlisted")
              {
                 echo "
                     <div>
