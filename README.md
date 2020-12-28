@@ -66,10 +66,12 @@ Colleges and most private schools have in-campus hostels. Most possess an improp
 ### Built With
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
+* Pure CSS
+* Javascript
 * [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
+* HTML
+* [PHP](https://www.php.net/)
+* [Python](https://www.python.org/)
 
 
 <!-- GETTING STARTED -->
