@@ -92,13 +92,15 @@ Implementation of a DBMS would contribute greatly to making inmates’ lives eas
 ### Installation
 
 1. Run the following commands to install PHP, mysql and PHPmyadmin
+
 ```sudo apt-get install php libapache2-mod-php
 sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl
 sudo apt install mysql-server
 ```
 
 2. Clone the repo
-   ```git clone https://github.com/kay-23/DBMS-Project-PHP.git```
+
+```git clone https://github.com/kay-23/DBMS-Project-PHP.git```
    
 <!-- USAGE EXAMPLES -->
 ## Usage
