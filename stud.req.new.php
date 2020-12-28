@@ -1,3 +1,12 @@
+<?php
+    $val1 = $_POST['deets'];
+    if(!empty($val1)){
+        $val1 = null;
+        header("Location: /view_hostels.php");
+        // exit(0);
+    }
+?>
+
 <!DOCTYPE html>
 
 <html>

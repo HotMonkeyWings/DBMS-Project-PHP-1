@@ -46,21 +46,26 @@ while ($row = mysqli_fetch_assoc($result)) {
     
 </head>
 
-<body>
+<body style="overflow:hidden">
 
     <h1>Requests</h1>
 
-    <a href="view_hostels.php">View hostel details</a>
+    
 
     <br><br>
-    <form action="stud.req.new.php">
+    <form action="stud.req.new.php" method="POST">
         <div class=" w3l-login-form" style="background-color:rgba(0,0,0,0)">
 
             <button type="submit" name="new">New Request</button>
+            <br><br>
+            <button type="submit" name="deets" value = "123">View Hostel Details</button>
+            
 
         </div>
 
     </form>
+
+    
 
     <div class="lmao" style="height: 70vh;position:relative;overflow:auto;">
 
