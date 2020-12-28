@@ -160,4 +160,4 @@ Adil Chery - dilluchery@gmail.com
 [issues-url]: https://github.com/kay-23/DBMS-Project-PHP/issues
 [license-shield]: https://img.shields.io/badge/license-MIT-orange
 [license-url]: https://github.com/kay-23/DBMS-Project-PHP/blob/master/LICENSE.txt
-[product-screenshot]: Screenshots/Screenshot%20(5).png
+[product-screenshot]: Screenshots/SSMain.png
