@@ -110,7 +110,7 @@ git clone https://github.com/kay-23/DBMS-Project-PHP.git
 mysql -u [user] -p hostel < hostel2.sql
 ```
 
-4. Change the username and password inside /includes/db.config.php and /includes/db_connection.inc.php
+4. Change the username and password inside ```/includes/db.config.php``` and ```/includes/db_connection.inc.php```
    
 <!-- USAGE EXAMPLES -->
 ## Usage
