@@ -103,6 +103,14 @@ sudo apt install mysql-server
 ```
 git clone https://github.com/kay-23/DBMS-Project-PHP.git
 ```
+
+3. Create a database in mySQL called hostel and run the following command to get the table
+
+```
+mysql -u [user] -p hostel < hostel2.sql
+```
+
+4. Change the username and password inside /includes/db.config.php and /includes/db_connection.inc.php
    
 <!-- USAGE EXAMPLES -->
 ## Usage
